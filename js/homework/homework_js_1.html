@@ -149,24 +149,22 @@
     // 6- За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
     //     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
     //
-    // let person = {
-    //     LastName: 'Zhukov',
-    //     firstName: 'Yevhenii',
-    //     middleName: 'Oleksandrovich',
-    //     year: 26,
-    //     a: 'Вітаю' ,
-    //     b: 'Тобі' ,
-    //     с: 'років'
-    // }
-    // console.log(person.a);
-    // let p= prompt('your name ?');
-    // console.log(p);
-    // let t=prompt('your middleName ?' );
-    // console.log(t);
-    // console.log(person.b);
-    // let r= prompt("year");
-    // console.log(r);
-    // console.log(person.с);
+    let person = {
+        LastName: 'Zhukov',
+        firstName: 'Yevhenii',
+        middleName: 'Oleksandrovich',
+        year: 26,
+        a: 'Вітаю' ,
+        b: 'Тобі' ,
+        с: 'років'
+    }
+
+    let p= prompt('your name ?');
+    let t=prompt('your middleName ?' );
+    let r= prompt("year");
+    let n =person.a+p+t+person.b+r+person.с;
+    console.log(n);
+
     // - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
     //     let a = 100; let b = '100'; let c = true;
 
