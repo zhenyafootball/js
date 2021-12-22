@@ -97,13 +97,16 @@
 // })
 //
 
-           // CALLBACL
+           // CALLBACK
 // function Up(isWorkingDay ,callback) {
 //         setTimeout(()=>{
 //             if (isWorkingDay) {
-//                 console.log('Here we go again');
-//                 callback()
+//
+//                 callback('Hello')
+//                 return
 //             }
+//             console.log('Here we go again');
+//             callback(null,isWorkingDay)
 //         },1000)
 //
 // }
@@ -114,10 +117,11 @@
 //         setTimeout(() => {
 //             if (eat) {
 //                console.log ('I cook food');
-//                callback()
+//                callback('food')
 //             }else {
 //                console.log('пустий холодильник ((')
 //             }
+//             callback(null,eat)
 //         },1300)
 //
 //
@@ -127,7 +131,7 @@
 //         setTimeout(() => {
 //                 console.log ('click  click  click');
 //
-//           callback()
+//           callback(null, work)
 //         },8000)
 //
 // }
@@ -136,7 +140,7 @@
 //
 //         setTimeout(() => {
 //             console.log('snore snore snore');
-//             callback()
+//             callback(null, sleep)
 //
 //         }, 9000)
 //
@@ -145,7 +149,7 @@
 //
 // Up( true,()=>{
 //     console.log ('morning')
-// })
+//
 //
 //     goEat( true,eat => {
 //         console.log('eating');
@@ -175,8 +179,8 @@
 //         console.log('sleep')
 //     })
 //
-//
-//
+// })
+
 
              // ASYNG AWAIT
 // function Up(isWorkingDay ) {
@@ -236,45 +240,41 @@
 // }
 //
 //
-//  async function morning(){
-//      const newDay = await Up(true);
-//        const newEat = await goEat(newDay);
+//  async function morning() {
+//     try {
+//         const newDay = await Up(true);
+//         const newEat1 = await goEat(newDay);
 //
-//      console.log(newDay, ' newDay');
-//      console.log(newEat, ' eat macaroni');
-//
-// }
-//
-//  morning ()
+//         console.log(newDay, ' newDay1');
+//         console.log(newEat1, ' eat macaroni');
 //
 //
-//             async function time(){
-//                 const job = await goWork(true);
-//                 const newEat = await goEat(job)
-//                 console.log(job, 'job is done ')
-//                 console.log(newEat , 'obid')
+//         const job = await goWork(true);
+//         const newEat = await goEat(job)
+//         console.log(job, 'job is done ')
+//         console.log(newEat, 'obid')
+//
+//
+//         const job1 = await goWork(true)
+//         const dinner = await goEat(job1)
+//
+//
+//         console.log(job, 'job is done')
+//         console.log(dinner, 'dinner')
+//
+//
+//         const film = await goWatchfilm(true)
+//         const sleep = await goSleep(film)
+//
+//
+//         console.log(film, 'Harry Potter')
+//         console.log(sleep, 'hrap')
+//
+//
+//     } catch(e) {
+//      console.Log('error')
+//      console.Log(e)
+//  }
 //             }
 //
-//             time()
-//
-//             async function time2(){
-//     const job = await goWork(true)
-//     const dinner  = await goEat(job)
-//
-//
-//     console.log(job,'job is done')
-//     console.log(dinner, 'dinner')
-// }
-//
-// time2()
-//
-//             async function night(){
-//                 const film = await goWatchfilm(true)
-//                 const sleep  = await goSleep(film)
-//
-//
-//                 console.log(film,'Harry Potter')
-//                 console.log(sleep, 'hrap')
-//             }
-//
-//             night()
+//  morning()
