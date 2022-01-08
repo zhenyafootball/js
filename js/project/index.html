@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body {
+
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: stretch;
+            align-items: center;
+
+        }
+
+
+        .posts {
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .users{
+            margin: 10px;
+            padding: 10px;
+            border-radius: 15px;
+            display: flex;
+            box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+            flex-wrap: wrap;
+        }
+
+
+
+        .users button {
+            background: #d8e4ef;
+            transition: .3s;
+            transform: rotateY(10grad);
+        }
+
+        .post h3 {
+            margin: 0;
+        }
+
+        .post h4 {
+            height: 50px;
+        }
+
+        div.user   {
+            width: 171px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid darkgrey;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            cursor: pointer;
+            box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: space-around;
+        }
+
+
+
+
+    </style>
 </head>
 <body>
-<a href="user-details.html">userDetails</a>
 <div class="posts"></div>
 <div class="users">
 </div>

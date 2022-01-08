@@ -5,7 +5,99 @@
     <title>Title</title>
 </head>
 <body>
-<a href="post-details.html">postDetails</a>
+<style>
+    body {
+        width: 300px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+        align-items: center;
+
+    }
+
+
+    .posts {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 15px;
+        display: flex;
+
+        flex-wrap: wrap;
+
+
+
+
+    }
+
+    div{
+
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid darkgrey;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        cursor: pointer;
+        box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+
+
+
+
+    }
+
+
+
+    .users button {
+        background: #d8e4ef;
+        transition: .3s;
+        transform: rotateY(10grad);
+    }
+
+    .post h3 {
+        margin: 0;
+    }
+
+    .post h4 {
+        height: 50px;
+    }
+
+    div user  {
+        width: 220px;
+        height: 260px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid darkgrey;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    div top {
+        background: #d8e4ef;
+        transition: .3s;
+        transform: rotateY(10grad);
+    }
+
+    .comment h3 {
+        margin: 0;
+    }
+
+    .comment h4 {
+        height: 50px;
+    }
+
+</style>
+<div class="posts"></div>
 <script src="user-details.js" >
 
 </script>

@@ -12,7 +12,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             userPostIdDiv.innerText = 'post Id -' + userItem.postId;
 
             let userIdDiv = document.createElement('div')
-            userIdDiv.innerText = 'id-' + userItem.id;
+            userIdDiv.innerText = 'id-' +userItem.id ;
 
             let userNameDiv = document.createElement('div')
             userNameDiv.innerText = '"name " : ' + userItem.name
@@ -67,12 +67,14 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
             let button = document.createElement('button');
             button.innerText = 'click';
+            button.classList.add('click')
+
             button.onclick = function () {
-                let userDetails = JSON.parse(localStorage.getItem('userDetails')) || [];
-                userDetails.push(userItem);
-                localStorage.setItem('userDetails',JSON.stringify(userDetails));
+                localStorage.setItem('users', JSON.stringify(userItem.id))
+                window.location.href = 'user-details.html'
 
             }
+
 
 
 
