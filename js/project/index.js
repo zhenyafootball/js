@@ -8,8 +8,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             let userDiv = document.createElement(`div`);
             userDiv.classList.add(`user`);
 
-            let userPostIdDiv = document.createElement('div')
-            userPostIdDiv.innerText = 'post Id -' + userItem.postId;
+
 
             let userIdDiv = document.createElement('div')
             userIdDiv.innerText = 'id-' +userItem.id ;
@@ -24,7 +23,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             userEmailDiv.innerText = '"email" :' +  userItem.email
 
             let userAddressDiv = document.createElement('div')
-            userAddressDiv.innerText ='"address " :' + userItem.address + '{'
+            userAddressDiv.innerText ='"address " :'
 
             let userStreetDiv = document.createElement('div')
             userStreetDiv.innerText = '"street" :' + userItem.address.street
@@ -39,7 +38,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             userZipcodeDiv.innerText = '"Zipcode" :' +  userItem.address.zipcode
 
             let userGeoDiv = document.createElement('div')
-            userGeoDiv.innerText = '"geo" :' + userItem.address.geo + '{'
+            userGeoDiv.innerText = '"geo" :'
 
             let userLatDiv = document.createElement('div')
             userLatDiv.innerText = '"lat" : ' + userItem.address.geo.lat
@@ -54,7 +53,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             userWebsiteDiv.innerText = '"website" :' + userItem.website
 
             let userCompanyDiv = document.createElement('div')
-            userCompanyDiv.innerText = '"company" :' + userItem.company
+            userCompanyDiv.innerText = '"company" :'
 
             let userNameCompanyDiv = document.createElement('div')
             userNameCompanyDiv.innerText = '"name" : ' + userItem.company.name
@@ -83,7 +82,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 
 
-            userDiv.append(userPostIdDiv, userIdDiv, userNameDiv, userUsernameDiv, userEmailDiv,  )
+            userDiv.append( userIdDiv, userNameDiv, userUsernameDiv, userEmailDiv,  )
             userDiv.append(userAddressDiv,userStreetDiv,userSuiteDiv,userCityDiv,userZipcodeDiv ,userGeoDiv , userLatDiv , userLngDiv, userPhoneDiv , userWebsiteDiv , userCompanyDiv, userNameCompanyDiv,userCatchPhraseDiv, userBsDiv ,button)
             usersDiv.appendChild(userDiv);
 
